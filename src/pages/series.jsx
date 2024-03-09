@@ -7,7 +7,7 @@ function Series(props) {
         <>
         
             <NavBar/>
-
+            <p>series page</p>
             <Footer/>
         
         </>

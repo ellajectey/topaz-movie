@@ -7,7 +7,7 @@ function Register(props) {
         <>
         
             <NavBar/>
-
+            <p>register page</p>
             <Footer/>
         
         </>

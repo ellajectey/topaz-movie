@@ -7,7 +7,7 @@ function Homepage(props) {
         <>
         
             <NavBar/>
-
+            <p>Homepage page</p>
             <Footer/>
         
         </>
