@@ -2,16 +2,16 @@ import React from 'react';
 import NavBar from '../components/navBar';
 import Footer from '../components/footer';
 
-function Moviepage(props) {
+function Searchpage(props) {
     return (
         <>
         
             <NavBar/>
-            <p>movie page</p>
+            <p>search page</p>
             <Footer/>
         
         </>
     );
 }
 
-export default Moviepage;
+export default Searchpage;
