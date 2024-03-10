@@ -6,6 +6,8 @@ import Register from "./pages/register";
 import Bookmarks from "./pages/bookmarks";
 import Moviepage from "./pages/moviepage";
 import Series from "./pages/series";
+import SearchResults from "./pages/searchresults";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage /> },
@@ -14,6 +16,7 @@ const router = createBrowserRouter([
   { path: "/movie", element: <Moviepage /> },
   { path: "/series", element: <Series /> },
   { path: "/bookmarks", element: <Bookmarks /> },
+  {path: "/search", element: <SearchResults /> },
 ]);
 
 function App() {
