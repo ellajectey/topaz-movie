@@ -14,7 +14,7 @@ export default function Footer() {
           </nav>
         <p className="mt-4">&copy; 2024&nbsp; 
         <span className="text-white  ">JSE</span>
-        <span className="text-orange-800">Movies</span>. All rights reserved.</p>
+        <span className="text-orange-500">Movies</span>. All rights reserved.</p>
       </div>
     </footer>
 
