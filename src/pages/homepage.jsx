@@ -9,12 +9,7 @@ function Homepage(props) {
         
             <NavBar/>
             <Banner/>
-            <div>
-      <h2>Featured Movies</h2>
-      {/* Display featured movies */}
-      <h2>Trending Series</h2>
-      {/* Display trending series */}
-    </div>
+            <p>Homepage page</p>
             <Footer/>
         
         </>

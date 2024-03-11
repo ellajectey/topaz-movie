@@ -7,7 +7,7 @@ function Moviepage(props) {
         <>
         
             <NavBar/>
-
+            <p>movie page</p>
             <Footer/>
         
         </>

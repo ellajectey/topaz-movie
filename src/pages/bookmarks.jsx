@@ -7,7 +7,7 @@ function Bookmarks(props) {
         <>
         
             <NavBar/>
-
+            <p>Bookmarks page</p>
             <Footer/>
         
         </>
