@@ -1,27 +1,13 @@
+// NavBar.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router';
-
 
 export default function NavBar() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const navigate = useNavigate();
-
-  const handleChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Navigate to the search results page with the search term as a query parameter
-    navigate(`/search?query=${searchTerm}`);
-  };
-
   return (
     <header className="header bg-black text-white py-4 justify-center">
-      <div className="icon mx-auto flex items-center justify-between">
+      <div className="icon mx-auto flex items-center justify-between mx-10">
         <h1 className="text-2xl font-bold tracking-tight text-orange-500">
-          <span className="text-white">JSE</span> <span className="text-orange-800">Movies</span>
+          <span className="text-white">JSE</span> <span className="text-orange-500">Movies</span>
         </h1>
 
         <nav className="navbar flex ml-20">
@@ -33,46 +19,54 @@ export default function NavBar() {
           </ul>
         </nav>
 
-        <div className="flex items-center space-x-4">
-          <div className="relative flex items-center">
-            <form onSubmit={handleSubmit}>
+        <div className="flex items-center space-x-0">
+          <button
+            className="bg-transparent border-none outline-none"
+          >
+            {/* Replace the placeholder icon with your SVG */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-orange-500 cursor-pointer">
+              <path fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clipRule="evenodd" />
+            </svg>
+          </button>
+
+        <div className="relative flex items-center">
+          
+            <form className="absolute top-0 right-0 mt-10 flex items-center">
               <input
-                dir="rtl"
-                type="search text"
+                type="search"
                 id="search"
                 placeholder="Search movie"
-                className="border border-orange-800 w-90 px-3 py-2 rounded focus:outline-none focus:border-gray-600 text-black"
-                value={searchTerm}
-                onChange={handleChange}
+                className="border border-orange-800 w-40 px-3 py-2 rounded focus:outline-none focus:border-gray-600 text-black"
               />
-              <button
+              <Link to="/search"><button
                 dir="rtl"
-                className="rounded-s-lg font-semibold bg-orange-500 text-black px-4 py-2"
-                type="submit" // Change 'onClick' to 'type="submit"'
+                className="rounded-s-lg font-semibold bg-orange-500 text-black px-4 py-2 ml-0"
+                type="submit"
               >
                 Search
-              </button>
+              </button></Link>
             </form>
+          
           </div>
+        </div>
 
-          <div className="flex space-x-4">
-            <Link
-              to="/register"
-              className="bg-white text-black py-2 px-4 rounded hover:bg-orange-500 hover:text-white font-bold"
-            >
-              Register
-            </Link>
-          </div>
-          <div>
-            <Link
-              to="/login"
-              className="bg-white text-black py-2 px-4 rounded hover:bg-orange-500 hover:text-white font-bold"
-            >
-              Login
-            </Link>
-          </div>
+        <div className="flex space-x-4">
+          <Link
+            to="/register"
+            className="bg-white text-black py-2 px-4 rounded hover:bg-orange-500 hover:text-white font-bold"
+          >
+            Register
+          </Link>
+          {/* Add some margin or padding to create space */}
+          <span className="mr-4"></span>
+          <Link
+            to="/login"
+            className="bg-white text-black py-2 px-4 rounded hover:bg-orange-500 hover:text-white font-bold"
+          >
+            Login
+          </Link>
         </div>
       </div>
     </header>
-  );
+  );       
 }
