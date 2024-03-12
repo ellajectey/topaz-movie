@@ -3,7 +3,7 @@ import NavBar from '../components/navBar';
 import Footer from '../components/footer';
 import { Link } from 'react-router-dom';
 import Moviecard from '../components/movieCard';
-import AppContext from '../AppContext';
+
 
 function Bookmarks() {
     const [bookmarkedMovies, setBookmarkedMovies] = useState([]);

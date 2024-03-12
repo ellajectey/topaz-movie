@@ -11,7 +11,9 @@ export default function Moviecard({genre, groupedMovies, movies, bookmarks,toggl
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 my-4">
         {groupedMovies[genre.id] &&
           groupedMovies[genre.id].map((movie) => (
+
             <div key={movie.id} className="border p-4 rounded-lg  bg-white border border-orange-200 rounded-lg shadow sm:p-8 dark:bg-gray-900 dark:border-gray-700 shadow-[rgb(255,165,0)_0px_3px_8px]">
+
               <img
                 src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                 alt={movie.title}

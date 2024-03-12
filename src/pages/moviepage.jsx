@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import NavBar from "../components/navBar";
 import Footer from "../components/footer";
 import Moviecard from "../components/movieCard";
-// import AppContext from "../AppContext";
 
 
 function MoviePage() {
@@ -79,8 +78,10 @@ function MoviePage() {
             <NavBar />
             <div className="container mx-auto mt-4">
                 <h1 className="text-2xl font-bold mb-4">Movies by Genre</h1>
+
                 {genres.map((genre, key) => (
                     <Moviecard key={key} genre={genre} movies={movies} groupedMovies={groupedMovies} bookmarks={bookmarks} toggleBookmark={toggleBookmark}/>
+
                 ))}
                 <Link to="/bookmarks" className="ml-2 text-sm text-blue-500 hover:underline">View Bookmarks</Link>
             </div>
