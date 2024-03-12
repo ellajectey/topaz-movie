@@ -9,7 +9,7 @@ function Homepage(props) {
         
             <NavBar/>
             <Banner/>
-            <p>Homepage page</p>
+            <h1>Welcome to My Movie Website</h1>
             <Footer/>
         
         </>

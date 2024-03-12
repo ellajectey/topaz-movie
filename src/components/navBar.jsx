@@ -59,12 +59,12 @@ export default function NavBar() {
                 onChange={handleChange}
               />
               <button
-                className="rounded-s-lg font-semibold bg-orange-500 text-black px-4 py-2"
+                className="font-semibold bg-orange-500 text-black px-4 py-2 "
                 type="submit"
                 style={{ marginLeft: '-2px' }} // Adjust the margin to align the button with the input field
               >
-                Search
-              </button>
+                Search 
+              </button >
             </form>
           )}
         </div>

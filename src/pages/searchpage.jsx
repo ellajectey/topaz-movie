@@ -11,6 +11,7 @@ function SearchPage() {
     const searchParams = new URLSearchParams(location.search);
     const query = searchParams.get('query');
     if (query) {
+      console.log("Query:", query);
       fetchSearchResults(query);
     }
   }, [location.search]);
@@ -18,6 +19,7 @@ function SearchPage() {
   const fetchSearchResults = async (query) => {
     try {
       // You can make an API request here to fetch search results based on the query
+      console.log("Fetching search results for query:", query);
       const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=8d14bc5cc17bd609435aa33c0221ce8b&query=${query}`);
       const data = await response.json();
       setSearchResults(data.results); // Assuming data.results contains the search results
