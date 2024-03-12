@@ -40,12 +40,19 @@ console.log(url);
     };
 
     const handleViewDetails = (movieId) => {
-        // Implement code to view details for the selected movie
+        // View details for the selected movie
     };
 
     const handleAddToBookmarks = (movieId) => {
-        // Implement code to add the selected movie to bookmarks
-    };
+        // Add the selected movie to bookmarks
+            if (bookmarks.includes(movieId)) {
+                // Remove from bookmarks
+                setBookmarks(bookmarks.filter(id => id !== movieId));
+            } else {
+                // Add to bookmarks
+                setBookmarks([...bookmarks, movieId]);
+            }
+        };
 
     return (
         <div>
@@ -56,7 +63,9 @@ console.log(url);
                         <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} />
                         <div>
                             <button onClick={() => handleViewDetails(movie.id)}>View Details</button>
-                            <button onClick={() => handleAddToBookmarks(movie.id)}>Add to Bookmarks</button>
+                            <button onClick={() => handleAddToBookmarks(movie.id)}>Add to Bookmarks
+                            {bookmarks.includes(movie.id) ? 'Remove from Bookmarks' : 'Add to Bookmarks'}
+                            </button>
                         </div>
                     </div>
                 ))}
