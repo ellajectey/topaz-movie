@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import NavBar from '../components/navBar';
 import Footer from '../components/footer';
 import { Link } from 'react-router-dom';
+import Moviecard from '../components/movieCard';
+
 
 function Bookmarks() {
-const [bookmarkedMovies, setBookmarkedMovies] = useState([]);
+    const [bookmarkedMovies, setBookmarkedMovies] = useState([]);
+    // const [genresShared, setGenresShared] = useContext(AppContext);
 
 useEffect(() => {
     // Retrieve bookmarked movie IDs from local storage
@@ -12,6 +15,7 @@ useEffect(() => {
     if (storedBookmarks) {
         // Fetch details of bookmarked movies using the IDs
         fetchBookmarkedMovies(storedBookmarks);
+        // console.log('incoming genres', genresShared);
     }
 }, []);
 
@@ -31,7 +35,7 @@ const fetchBookmarkedMovies = async (movieIds) => {
 
   return (
     <>
-        <NavBar />
+        {/* <NavBar /> */}
         <div className="container mx-auto mt-4">
                 <h1 className="text-2xl font-bold mb-4">Bookmarked Movies</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
@@ -50,6 +54,7 @@ const fetchBookmarkedMovies = async (movieIds) => {
                     ))}
                 </div>
             </div>
+            {/* <Moviecard genre={genre} movies={movies} groupedMovies={groupedMovies} bookmarks={bookmarks} toggleBookmark={toggleBookmark}/> */}
         <Footer />
     </>
 );

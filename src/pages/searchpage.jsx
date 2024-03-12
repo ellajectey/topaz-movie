@@ -28,6 +28,7 @@ function SearchPage() {
     }  
   };
 
+
   // Display search results
   return (
     <>
@@ -50,7 +51,9 @@ function SearchPage() {
         </div>
       </div>
       <Footer />
+
     </>
   );
 }
 export default SearchPage;
+
