@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link } from 'react-router-dom';
 import NavBar from "../components/navBar";
 import Footer from "../components/footer";
 import Moviecard from "../components/movieCard";
+// import AppContext from "../AppContext";
 
 
 function MoviePage() {
     const [genres, setGenres] = useState([]);
     const [movies, setMovies] = useState([]);
     const [bookmarks, setBookmarks] = useState([]);
+    // const [genresShared, setGenresShared] = useContext(AppContext);
+
 
     useEffect(() => {
         // Fetch genres
@@ -32,6 +35,7 @@ function MoviePage() {
             const response = await fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=8d14bc5cc17bd609435aa33c0221ce8b&language=en');
             const data = await response.json();
             setGenres(data.genres);
+            // setGenresShared(data.genres);
         } catch (error) {
             console.error('Error fetching genres:', error);
         }
@@ -75,8 +79,8 @@ function MoviePage() {
             <NavBar />
             <div className="container mx-auto mt-4">
                 <h1 className="text-2xl font-bold mb-4">Movies by Genre</h1>
-                {genres.map(genre => (
-                    <Moviecard genre={genre} movies={movies} groupedMovies={groupedMovies} bookmarks={bookmarks} toggleBookmark={toggleBookmark}/>
+                {genres.map((genre, key) => (
+                    <Moviecard key={key} genre={genre} movies={movies} groupedMovies={groupedMovies} bookmarks={bookmarks} toggleBookmark={toggleBookmark}/>
                 ))}
                 <Link to="/bookmarks" className="ml-2 text-sm text-blue-500 hover:underline">View Bookmarks</Link>
             </div>
