@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from '../components/navBar';
 import Footer from '../components/footer';
 import { Link } from 'react-router-dom';
+import Moviecard from '../components/movieCard';
 
 function Bookmarks() {
 const [bookmarkedMovies, setBookmarkedMovies] = useState([]);
