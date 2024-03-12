@@ -32,7 +32,8 @@ export default function Searchpage() {
     }
   };
 
-
+return( 
+  <>
       <NavBar />
        <p>search page</p>
      <div className="text-white h-[90vh] flex justify-center items-center content-center mx-20 w-70 h-20 bg-contain shadow-lg shadow-indigo-500/40 rounded-md bg-center bg-cover bg-no-repeat bg-[url('./assets/images/searchpage-header.png')]">
@@ -51,7 +52,9 @@ export default function Searchpage() {
       )}
       <Moviecard/>
       <Footer />
-
+      </>
+);
+      }
 
 
 // function Searchpage(props) {
@@ -72,4 +75,4 @@ export default function Searchpage() {
 // }
 
 // export default Searchpage;
-
+  
