@@ -3,11 +3,73 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-export default function Movies() {
+const apiKey = 'YOUR_TMDB_API_KEY';
 
-    const url = 'https://api.themoviedb.org/3/configuration'
+export default function Movies() {
+    const url = 'https://api.themoviedb.org/3/discover/movie?api_key=8d14bc5cc17bd609435aa33c0221ce8b&language=en'
 console.log(url);
 
+    const [movies, setMovies] = useState([]);
 
-  
+    useEffect(() => {
+        const fetchMovies = async () => {
+            try {
+                const response = await fetch(
+                    `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en`
+                );
+                if (!response.ok) {
+                    throw new Error('Failed to fetch movies');
+                }
+                const data = await response.json();
+                console.log('Fetched movies:', data.results);
+                setMovies(data.results);
+            } catch (error) {
+                console.error('Error fetching movies:', error);
+            }
+        };
+
+        fetchMovies();
+    }, []);
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+    };
+
+    const handleViewDetails = (movieId) => {
+        // View details for the selected movie
+    };
+
+    const handleAddToBookmarks = (movieId) => {
+        // Add the selected movie to bookmarks
+            if (bookmarks.includes(movieId)) {
+                // Remove from bookmarks
+                setBookmarks(bookmarks.filter(id => id !== movieId));
+            } else {
+                // Add to bookmarks
+                setBookmarks([...bookmarks, movieId]);
+            }
+        };
+
+    return (
+        <div>
+            <h2>Featured Movies</h2>
+            <Slider {...settings}>
+                {movies.map((movie) => (
+                    <div key={movie.id}>
+                        <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} />
+                        <div>
+                            <button onClick={() => handleViewDetails(movie.id)}>View Details</button>
+                            <button onClick={() => handleAddToBookmarks(movie.id)}>Add to Bookmarks
+                            {bookmarks.includes(movie.id) ? 'Remove from Bookmarks' : 'Add to Bookmarks'}
+                            </button>
+                        </div>
+                    </div>
+                ))}
+            </Slider>
+        </div>
+    );
 }
