@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link } from 'react-router-dom';
 import NavBar from "../components/navBar";
 import Footer from "../components/footer";
+import Moviecard from "../components/movieCard";
 
 
 function MoviePage() {
     const [movies, setMovies] = useState([]);
     const [bookmarks, setBookmarks] = useState([]);
+    // const [genresShared, setGenresShared] = useContext(AppContext);
+
 
     useEffect(() => {
         // Fetch movies
@@ -22,7 +25,6 @@ function MoviePage() {
         // Update local storage when bookmarks change
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }, [bookmarks]);
-
 
     const fetchMovies = async () => {
         try {
@@ -81,9 +83,8 @@ function MoviePage() {
                     </div>
                 </div>
             ))}
+            <Link to="/bookmarks" className="ml-2 text-sm text-blue-500 hover:underline">View Bookmarks</Link>
         </div>
-        </div>
-        
             <Footer />
         </>
     );
