@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import Series from "../pages/series";
 
 export default function Moviecard({genre, groupedMovies, movies, bookmarks,toggleBookmark}) {
  
@@ -37,7 +38,7 @@ export default function Moviecard({genre, groupedMovies, movies, bookmarks,toggl
 
                 <p className="text-yellow-200">{movie.vote_average}</p>
               </div>
-              <p className="text-gray-300 font-semi-bold">Release Date: {movie.release_date}</p>
+              <p className="text-gray-300 font-semi-bold">Release Date: {Series.release_date}</p>
               <div className=" item-center mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
