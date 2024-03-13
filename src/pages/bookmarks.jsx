@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, } from 'react';
 import NavBar from '../components/navBar';
 import Footer from '../components/footer';
 import { Link } from 'react-router-dom';
-import Moviecard from '../components/movieCard';
+import Moviedetails from '../components/movieDetails';
 
 
 function Bookmarks() {
@@ -55,6 +55,7 @@ const fetchBookmarkedMovies = async (movieIds) => {
                 </div>
             </div>
             {/* <Moviecard genre={genre} movies={movies} groupedMovies={groupedMovies} bookmarks={bookmarks} toggleBookmark={toggleBookmark}/> */}
+            <Moviedetails/>
         <Footer />
     </>
 );
