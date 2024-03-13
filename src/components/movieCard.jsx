@@ -64,7 +64,7 @@ export default function Moviecard({genre, groupedMovies, movies, bookmarks,toggl
                 
                 <Link
                   to="/bookmarks"
-                  className="ml-2 text-sm text-blue-500 hover:underline text-left p-4"
+                  className="ml-2 text-sm text-white hover:underline text-left p-4"
                 >
                   View Bookmarks
                 </Link>
