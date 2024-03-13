@@ -78,7 +78,7 @@ function MoviePage() {
                 {genres.map(genre => (
                     <Moviecard genre={genre} movies={movies} groupedMovies={groupedMovies} bookmarks={bookmarks} toggleBookmark={toggleBookmark}/>
                 ))}
-                <Link to="/bookmarks" className="ml-2 text-sm text-blue-500 hover:underline">View Bookmarks</Link>
+                <Link to="/bookmarks" className="ml-2 text-sm text-white hover:underline">View Bookmarks</Link>
             </div>
            
             <Footer />

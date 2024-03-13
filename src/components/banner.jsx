@@ -1,75 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React from 'react';
 
-const apiKey = 'YOUR_TMDB_API_KEY';
-
-export default function Movies() {
-    const url = 'https://api.themoviedb.org/3/discover/movie?api_key=8d14bc5cc17bd609435aa33c0221ce8b&language=en'
-console.log(url);
-
-    const [movies, setMovies] = useState([]);
-
-    useEffect(() => {
-        const fetchMovies = async () => {
-            try {
-                const response = await fetch(
-                    `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en`
-                );
-                if (!response.ok) {
-                    throw new Error('Failed to fetch movies');
-                }
-                const data = await response.json();
-                console.log('Fetched movies:', data.results);
-                setMovies(data.results);
-            } catch (error) {
-                console.error('Error fetching movies:', error);
-            }
-        };
-
-        fetchMovies();
-    }, []);
-
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-    };
-
-    const handleViewDetails = (movieId) => {
-        // View details for the selected movie
-    };
-
-    const handleAddToBookmarks = (movieId) => {
-        // Add the selected movie to bookmarks
-            if (bookmarks.includes(movieId)) {
-                // Remove from bookmarks
-                setBookmarks(bookmarks.filter(id => id !== movieId));
-            } else {
-                // Add to bookmarks
-                setBookmarks([...bookmarks, movieId]);
-            }
-        };
-
-    return (
-        <div>
-            <h2>Featured Movies</h2>
-            <Slider {...settings}>
-                {movies.map((movie) => (
-                    <div key={movie.id}>
-                        <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} />
-                        <div>
-                            <button onClick={() => handleViewDetails(movie.id)}>View Details</button>
-                            <button onClick={() => handleAddToBookmarks(movie.id)}>Add to Bookmarks
-                            {bookmarks.includes(movie.id) ? 'Remove from Bookmarks' : 'Add to Bookmarks'}
-                            </button>
-                        </div>
-                    </div>
-                ))}
-            </Slider>
+const Banner = () => {
+  return (
+    <div className="flex justify-center items-center h-80 bg-cover bg-center bg-[url('./assets/images/banner.jpg')]">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center transition-transform duration-500 ease-in-out">
+        <h1 className="text-2xl font-bold tracking-tight text-orange-500 transition-opacity duration-500 ease-in-out opacity-0">
+          <span className="text-white">JSE</span><span className="text-orange-500 bg-clip-text text-transparent">Movies</span>.
+        </h1>
+          <p className="text-white text-lg transition-opacity duration-500 ease-in-out opacity-0">Explore our vast collection of movies now!</p>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
+
+export default Banner;
