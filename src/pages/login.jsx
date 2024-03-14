@@ -9,31 +9,31 @@ function Login(props) {
      <NavBar />
 <div class="flex justify-center items-center h-screen bg-[url('./assets/images/yellow-movie-bg.jpg')]">
   <div class=" bg-slate-800 border border-slate-400 rounded-md p-12 shadow-lg backdrop-filter backdrop-blur-sm bg-opacity-30 relative">
-    <h2 class="text-2xl font-semibold text-center mb-6">Login</h2>
+    <h2 class="text-2xl font-semibold text-center text-white mb-6">Login</h2>
     <form class="w-full max-w-md">
       <div class="mb-4">
-        <label
+        {/* <label
           class="block text-gray-700 text-sm font-bold mb-2"
           for="username"
         >
           Username
-        </label>
+        </label> */}
         <input
-          class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="appearance-none py-4 bg-transparent border-b border-teal-500 w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
           id="username"
           type="text"
           placeholder="Enter your username"
         />
       </div>
       <div class="mb-6">
-        <label
+        {/* <label
           class="block text-gray-700 text-sm font-bold mb-2"
           for="password"
         >
           Password
-        </label>
+        </label> */}
         <input
-          class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="appearance-none py-4 bg-transparent border-b border-teal-500 w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
           id="password"
           type="password"
           placeholder="Enter your password"
@@ -41,23 +41,28 @@ function Login(props) {
       </div>
       <div class="flex items-center justify-between">
         <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          class="w-full mb-4 text-[18px] mt-6 p-2 rounded-full bg-white text-orange-600 hover:bg-orange-600 hover:text-white"
           type="button"
         >
-          Sign In
+          <Link to="/"
+          >Sign In</Link>
+          
         </button>
-        <a
-          class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+        
+      </div>
+      <a
+          class=" ml-10  text-white hover:text-blue-800 "
           href="#"
         >
           Forgot Password?
         </a>
-      </div>
       <div class="mt-4 text-center">
-        <span class="text-gray-600">Not Registered? </span>
-        <a class="text-blue-300" href="/signup">
-          Sign Up
-        </a>
+        <span class="text-gray-300">Not Registered? 
+        <Link className="text-yellow-400" to="/register">
+                Register!
+              </Link>
+        </span>
+        
       </div>
     </form>
   </div>
