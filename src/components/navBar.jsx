@@ -26,7 +26,7 @@ export default function NavBar() {
     <header className="header bg-black text-white py-4 justify-center">
       <div className="icon mx-auto flex items-center justify-between">
         <h1 className="text-2xl font-bold tracking-tight text-orange-500">
-          <span className="text-white">JSE</span> 
+          <span className="text-white">JSE</span><span className="text-orange-500">Movies</span>
         </h1>
 
         <nav className="navbar flex ml-20">
