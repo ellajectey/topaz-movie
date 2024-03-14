@@ -25,14 +25,14 @@ export default function NavBar() {
   return (
     <header className="  header bg-black text-white py-4 justify-center ">
       <div className="icon mx-20 flex items-center justify-between">
-        <h1 className="text-2xl font-bold tracking-tight text-orange-500">
+        <h1 className="text-3xl font-bold tracking-tight text-orange-500">
 
           <span className="text-white">JSE</span> 
           <span className="text-gradient-to-r from-amber-500 to-orange-600">Movies</span> 
 
         </h1>
 
-        <nav className="navbar flex ml-20">
+        <nav className="navbar flex ml-20 text-2xl">
           <ul className="flex space-x-10 ml-20">
             <li><Link to="/" className="hover:text-orange-500">Home</Link></li>
             <li><Link to="/movie" className="hover:text-orange-500">Movies</Link></li>
