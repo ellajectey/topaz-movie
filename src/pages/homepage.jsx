@@ -11,7 +11,6 @@ function Homepage(props) {
         
             <NavBar/>
             <Banner/>
-            <h1>Welcome to My Movie Website</h1>
             <TopRated/>
             <PopularMovies/>
             <Footer/>
