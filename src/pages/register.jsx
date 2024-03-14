@@ -52,7 +52,7 @@ function Register(props) {
             <span className="px-4 py-6 text-yellow-400"> Forgot Password?</span>
           </div>
           
-          <Link className="text-yellow-400" to="/"><button
+          <Link className="text-yellow-400" to="/login"><button
             className="w-full mb-4 text-[18px] mt-6 p-2 rounded-full bg-white text-orange-600 hover:bg-orange-600 hover:text-white"
             type="submit">
             Register
