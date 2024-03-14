@@ -75,8 +75,8 @@ function MoviePage() {
             <NavBar />
             <div className="container mx-auto mt-4">
                 <h1 className="text-2xl font-bold mb-4">Movies by Genre</h1>
-                {genres.map(genre => (
-                    <Moviecard genre={genre} movies={movies} groupedMovies={groupedMovies} bookmarks={bookmarks} toggleBookmark={toggleBookmark}/>
+                {genres.map((genre, key) => (
+                    <Moviecard key={key} genre={genre} movies={movies} groupedMovies={groupedMovies} bookmarks={bookmarks} toggleBookmark={toggleBookmark}/>
                 ))}
                 <Link to="/bookmarks" className="ml-2 text-sm text-white hover:underline">View Bookmarks</Link>
             </div>

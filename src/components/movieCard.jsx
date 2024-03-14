@@ -15,11 +15,13 @@ export default function Moviecard({genre, groupedMovies, movies, bookmarks,toggl
 
             <div key={movie.id} className="border p-4 rounded-lg  bg-black border border-orange-200 rounded-lg shadow sm:p-8 dark:bg-gray-900 dark:border-gray-700 shadow-[rgb(255,165,0)_0px_3px_8px]">
 
-              <img
-                src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-                alt={movie.title}
-                className=" rounded-lgw-full h-auto rounded-md mb-2 flex items-center mx-auto "
-              />
+              <Link to={"/movieDetails?" + movie.id} className="ml-2 text-sm text-white hover:underline text-left p-4">
+                <img
+                  src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                  alt={movie.title}
+                  className=" rounded-lgw-full h-auto rounded-md mb-2 flex items-center mx-auto "
+                />                  
+              </Link>
               <h3 className="text-lg text-white font-semibold mb-2 mx-auto">{movie.title}</h3>
               <div className="flex items-center">
                 <svg
