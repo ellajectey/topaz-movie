@@ -9,7 +9,7 @@ const Banner = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch('https://api.themoviedb.org/3/discover/movie?api_key=8d14bc5cc17bd609435aa33c0221ce8b&language=en');
+        const response = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=8d14bc5cc17bd609435aa33c0221ce8b&language=en');
         const data = await response.json();
         setMovies(data.results);
       } catch (error) {
