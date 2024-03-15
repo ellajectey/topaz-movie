@@ -8,9 +8,9 @@ export default function UserRatings({ movieId }) {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const apiKey = "ca3c8ec02c3168db9a39ea17a1dcf0a9";
+        // const apiKey = "ca3c8ec02c3168db9a39ea17a1dcf0a9";
         const response = await axios.get(
-          `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${apiKey}`
+          `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${process.env.REACT_APP_API_KEY}`
         );
         setReviews(response.data.results);
       } catch (error) {

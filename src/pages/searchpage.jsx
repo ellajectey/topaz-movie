@@ -20,7 +20,7 @@ function SearchPage() {
     try {
       // You can make an API request here to fetch search results based on the query
       console.log("Fetching search results for query:", query);
-      const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=8d14bc5cc17bd609435aa33c0221ce8b&query=${query}`);
+      const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${query}`);
       const data = await response.json();
       setSearchResults(data.results); // Assuming data.results contains the search results
     } catch (error) {
@@ -33,9 +33,9 @@ function SearchPage() {
   return (
     <>
       <NavBar />
-      <div className="container mx-auto mt-4">
-        <h1 className="text-2xl font-bold mb-4">Search Results</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className=" bg-[url('./assets/images/yellow-movie-bg.jpg')] ">
+        <h1 className="text-2xl font-bold mb-4 text-white text-center p-4">Search Results</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-8">
           {searchResults.length === 0 ? (
             <p>No search results found.</p>
           ) : (
@@ -44,7 +44,7 @@ function SearchPage() {
 
                   <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} className="w-full h-auto rounded-md mb-2" />
                 <h2 className="text-xl font-bold text-orange-400">{movie.title}</h2>
-                <p className="text-white">{movie.overview}</p>
+                <p className="text-white line-clamp-6">{movie.overview}</p>
                 <p className="text-yellow-300">Release Date: {movie.release_date}</p>
                 
                 <svg

@@ -9,7 +9,7 @@ export default function Series() {
 
   const getSeries = () => {
     fetch(
-      "https://api.themoviedb.org/3/trending/tv/day?api_key=ca3c8ec02c3168db9a39ea17a1dcf0a9"
+      `https://api.themoviedb.org/3/trending/tv/day?api_key=${process.env.REACT_APP_API_KEY}`
     )
       .then((res) => res.json())
       .then((json) => setSeriesList(json.results));

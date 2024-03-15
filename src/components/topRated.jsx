@@ -24,7 +24,7 @@ export default function TopRated() {
     slidesToShow: 4, // Adjust as needed
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
   };
 
   return (
