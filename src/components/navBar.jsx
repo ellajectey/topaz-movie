@@ -34,7 +34,7 @@ export default function NavBar() {
             <span className="text-white">JSE</span> 
             <span className="text-gradient-to-r from-amber-500 to-orange-600">Movies</span> 
           </h1>
-          <nav className="hidden sm:block text-2xl">
+          <nav className="hidden sm:block text-xl px-16 text-center">
             <ul className="flex space-x-10">
               <li><Link to="/" className="hover:text-orange-500">Home</Link></li>
               <li><Link to="/movie" className="hover:text-orange-500">Movies</Link></li>
