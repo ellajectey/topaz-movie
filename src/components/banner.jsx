@@ -9,7 +9,7 @@ const Banner = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=8d14bc5cc17bd609435aa33c0221ce8b&language=en');
+        const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en`);
         const data = await response.json();
         setMovies(data.results);
       } catch (error) {
@@ -27,7 +27,7 @@ const Banner = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 1500,
     appendDots: dots => (
       <div style={{ position: "absolute", bottom: "20px", width: "100%", textAlign: "center" }}>
         <ul style={{ margin: "0" }}> {dots} </ul>

@@ -10,7 +10,7 @@ export default function PopularMovies() {
     const [popularList, setPopularList] = useState([])
 
     const getPopular = () => {
-        fetch('https://api.themoviedb.org/3/movie/popular?api_key=ca3c8ec02c3168db9a39ea17a1dcf0a9')
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}`)
         .then(res => res.json())
         .then(json => setPopularList(json.results))
       }

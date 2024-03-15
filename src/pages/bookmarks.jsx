@@ -22,7 +22,7 @@ function Bookmarks() {
     const fetchBookmarkedMovies = async (movieIds) => {
         try {
             const promises = movieIds.map(async (movieId) => {
-                const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=8d14bc5cc17bd609435aa33c0221ce8b&language=en`);
+                const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}`);
                 const data = await response.json();
                 return data;
             });
