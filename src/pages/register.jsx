@@ -8,7 +8,7 @@ function Register(props) {
     <>
       <NavBar />
 
-      <div className="text-white h-[100vh] flex justify-center items-center content-center bg-cover bg-[url('./assets/images/yellow-movie-bg.jpg')]">
+      <div className="sm:px-8 text-white h-[100vh] flex justify-center items-center content-center bg-cover bg-[url('./assets/images/yellow-movie-bg.jpg')]">
         <div className=" justify-center content-center bg-slate-800 border border-slate-400 rounded-md p-12 shadow-lg backdrop-filter backdrop-blur-sm bg-opacity-50 relative">
           <h1 className="text-xl  py-4 text-center" >Register Page</h1>
 

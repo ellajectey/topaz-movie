@@ -45,7 +45,7 @@ function MovieDetailspage() {
   return (
     <>
       <NavBar />
-      <div className="bg-[url('./assets/images/yellow-movie-bg.jpg')] px-8">
+      <div className="sm:px-8 bg-[url('./assets/images/yellow-movie-bg.jpg')] ">
         {/* show movie poster */}
         <br />
         <br />
