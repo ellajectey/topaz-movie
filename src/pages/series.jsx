@@ -46,7 +46,7 @@ export default function Series() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300 ease-in-out">
                   <div className="bg-gray-900 bg-opacity-75 rounded-lg px-4 py-2 text-white">
-                    <p>{series.overview}</p>
+                    <p className="line-clamp-5">{series.overview}</p>
                     <div className="flex items-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
