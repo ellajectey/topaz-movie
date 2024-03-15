@@ -36,12 +36,12 @@ function Bookmarks() {
     return (
         <>
             <NavBar />
-            <div className="container mx-auto mt-4">
-                <h1 className="text-2xl font-bold mb-4">Bookmarked Movies</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+            <div className=" bg-cover bg-[url('./assets/images/yellow-movie-bg.jpg')] py-8 ">
+                <h1 className="text-4xl text-center text-white font-bold mb-4 p-4">Bookmarked Movies</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 ">
                     {bookmarkedMovies.map((movie) => (
-                        <div key={movie.id} className="border p-4 rounded-lg  bg-gray-900 border border-orange-200 rounded-lg shadow sm:p-8 dark:bg-gray-900 dark:border-gray-700 shadow-[rgb(255,165,0)_0px_3px_8px]">
-                            <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} className="border border-black p-4 rounded-lg w-full h-auto rounded-md mb-2" />
+                        <div key={movie.id} className=" p-4 rounded-lg  bg-gray-900 border border-orange-200 rounded-lg shadow sm:p-8 dark:bg-gray-900 dark:border-gray-700 shadow-[rgb(255,165,0)_0px_3px_8px]">
+                            <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} className=" p-4 rounded-lg w-full h-auto rounded-md mb-2" />
                             <h3 className="text-lg text-white font-semibold mb-2">{movie.title}</h3>
                             <div className="flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-orange-800 mr-1">

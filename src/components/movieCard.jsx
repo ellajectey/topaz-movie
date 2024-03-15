@@ -8,8 +8,8 @@ export default function Moviecard({genre, groupedMovies, movies, bookmarks,toggl
   
   return (
     <div>
-      <h2 className="text-xl font-bold mb-2">{genre.name}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 my-4">
+      <h2 className="text-xl font-bold mb-2 mx-8 text-white ">{genre.name}</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 my-4 mx-8 bg-gray-600 bg-opacity-90 dark:bg-black dark:bg-opacity-90 p-8 rounded-lg">
         {groupedMovies[genre.id] &&
           groupedMovies[genre.id].map((movie) => (
 

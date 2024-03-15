@@ -73,12 +73,12 @@ function MoviePage() {
     return (
         <>
             <NavBar />
-            <div className="container mx-auto mt-4">
-                <h1 className="text-2xl font-bold mb-4">Movies by Genre</h1>
+            <div className="mx-auto bg-[url('./assets/images/yellow-movie-bg.jpg')]">
+                <h1 className="text-4xl font-bold mb-4 p-8 text-center text-white">Movies by Genre</h1>
                 {genres.map((genre, key) => (
                     <Moviecard key={key} genre={genre} movies={movies} groupedMovies={groupedMovies} bookmarks={bookmarks} toggleBookmark={toggleBookmark}/>
                 ))}
-                <Link to="/bookmarks" className="ml-2 text-sm text-white hover:underline">View Bookmarks</Link>
+                {/* <Link to="/bookmarks" className="ml-2 text-sm text-white hover:underline">View Bookmarks</Link> */}
             </div>
            
             <Footer />

@@ -22,11 +22,12 @@ export default function UserRatings({ movieId }) {
   }, [reviews]);
 
   return (
-    <>
+    <div className="bg-black bg-opacity-80 p-12 rounded-lg mx-auto py-4">
+   
       {reviews.map((review, key) => {
         return (
           <div key={key}>
-            <div>
+            <div className="inline-flex py-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -39,14 +40,14 @@ export default function UserRatings({ movieId }) {
                   clipRule="evenodd"
                 />
               </svg>
-              <h5>{review.author}</h5>
+              <h5 className="text-yellow-100 text-1xl">{review.author}</h5>
             </div>
             {/* <p style={{whiteSpace: 'pre'}}>{review.content}</p> */}
             <div
-              className="line-clamp-2"
+              className="line-clamp-3 text-white"
               dangerouslySetInnerHTML={{ __html: review.content }}
             />
-            <div className="text-red ">
+            <div className="text-yellow-500 inline-flex py-2 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -66,6 +67,6 @@ export default function UserRatings({ movieId }) {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }

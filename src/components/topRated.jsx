@@ -28,7 +28,7 @@ export default function TopRated() {
   };
 
   return (
-    <div className="bg-black p-8 my-8">
+    <div className="bg-black bg-opacity-90 p-8 py-8">
       <h2 class="text-white font-bold text-3xl">Top Rated Movies</h2>
       <Slider {...sliderSettings} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 my-8">
         {topRatedList.map((series) => (
@@ -37,8 +37,9 @@ export default function TopRated() {
             className="border p-4 rounded-lg border border-orange-200 rounded-lg shadow-sm dark:bg-gray-900 dark:border-gray-700 hover:shadow-lg"
           >
             <a
-              href={series.overview}
-              target="#"
+              href={"/movieDetails?" + series.id}
+              // href={series.overview}
+              // target="/movies"
               rel="noopener noreferrer"
               className="block relative group"
             >

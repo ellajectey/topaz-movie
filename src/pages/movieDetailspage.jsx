@@ -45,7 +45,7 @@ function MovieDetailspage() {
   return (
     <>
       <NavBar />
-      <div className="bg-gradient-to-r from-slate-500 to-slate-800 text-white">
+      <div className="bg-[url('./assets/images/yellow-movie-bg.jpg')] px-8">
         {/* show movie poster */}
         <br />
         <br />
@@ -54,7 +54,7 @@ function MovieDetailspage() {
           {/* // show movie detail i.e the title and a short overview */}
           {movie && <MovieDetails movie={movie} />}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 xl:grid-row-4 gap-2 my-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 xl:grid-row-4 gap-4 my-4">
             {/* // show movie ratings and user reviews */}
             {movieId && <UserRatings movieId={movieId} />}
           </div>

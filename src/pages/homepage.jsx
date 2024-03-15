@@ -7,7 +7,7 @@ import PopularMovies from '../components/popular';
 
 function Homepage(props) {
     return (
-        <>
+        <div className="bg-cover bg-[url('./assets/images/yellow-movie-bg.jpg')] ">
         
             <NavBar/>
             <Banner/>
@@ -15,7 +15,7 @@ function Homepage(props) {
             <PopularMovies/>
             <Footer/>
         
-        </>
+        </div>
         
     );
 }

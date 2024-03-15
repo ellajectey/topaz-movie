@@ -39,18 +39,20 @@ const Banner = () => {
   };
 
   return (
-    <div className="h-80 relative">
+    <div className="h-80 relative ">
       <Slider {...settings}>
         {movies.map(movie => (
           <div key={movie.id} className="h-80 relative">
-            <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} className="w-full h-full object-cover" />
-            <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white">
-              <h1 className="text-4xl font-bold mb-4">{movie.title}</h1>
+            <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} className="w-580 h-780 bg-cover" />
+            <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white ">
+              <div className='bg-black bg-opacity-60 p-8 rounded-lg text-center'>
+              <h1 className="text-4xl text-gray-400 text-outline font-bold mb-4 ">{movie.title}</h1>
               <h1 className="text-3xl font-bold tracking-tight text-orange-500 mb-2">
                 <span className="text-white shadow-orange">JSE</span> <span className="text-orange-500">Movies</span>.
               </h1>
-              <div className="border border-orange-500 bg-black px-2 py-4 rounded-lg">
+              <div className="border border-orange-500  px-2 py-4 rounded-lg">
                 <p className="text-lg text-white">Explore our vast collection of movies now!</p>
+              </div>
               </div>
             </div>
           </div>

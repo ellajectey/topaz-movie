@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export default function PopularMovies() {
@@ -30,7 +31,8 @@ export default function PopularMovies() {
     console.log(popularList)
 
     return (
-      <div className="bg-black p-8">
+      <div className="bg-black bg-opacity-90 p-8 py-8">
+        
         <h2 class="text-white font-bold text-3xl">Popular Movies</h2>
         <Slider {...sliderSettings} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 my-8">
           {popularList.map((series) => (
@@ -39,8 +41,8 @@ export default function PopularMovies() {
               className="border p-4 rounded-lg border border-orange-200 rounded-lg shadow-sm dark:bg-gray-900 dark:border-gray-700 hover:shadow-lg"
             >
               <a
-                href={series.overview}
-                target="#"
+              href={"/movieDetails?" + series.id}
+                target="/movie"
                 rel="noopener noreferrer"
                 className="block relative group"
               >
@@ -49,6 +51,7 @@ export default function PopularMovies() {
                   alt={series.name}
                   className="hover:opacity-75 transition duration-300 ease-in-out rounded-lg"
                 />
+               
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
                   <div className="bg-gray-900 bg-opacity-75 rounded-lg p-4 text-white">
                     <p>{series.overview}</p>
@@ -77,6 +80,7 @@ export default function PopularMovies() {
             </div>
           ))}
         </Slider>
+        
       </div>
     );
 }

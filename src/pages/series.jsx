@@ -25,13 +25,13 @@ export default function Series() {
     <>
       <NavBar />
 
-      <div className="bg-black p-8">
-        <h2 className="text-2xl font-bold mb-2 mt-6 m-0 p-0 ml-10">Series</h2>
+      <div className=" bg-[url('./assets/images/yellow-movie-bg.jpg')] p-8">
+        <h2 className="text-4xl text-center text-white font-bold mb-2 mt-6  p-0 ml-10">Series</h2>
         <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 my-8">
           {seriesList.map((series) => (
             <div
               key={series.id}
-              className="border p-4 rounded-lg   border border-orange-200 rounded-lg shadow sm:p-8 dark:bg-gray-900 dark:border-gray-700 shadow-[rgb(255,165,0)_0px_3px_8px]"
+              className="border p-4 rounded-lg border border-orange-200 rounded-lg shadow sm:p-8 bg-black bg-opacity-80 dark:bg-gray-900 dark:border-gray-700 shadow-[rgb(255,165,0)_0px_3px_8px]"
             >
               <a
                 href={series.overview}

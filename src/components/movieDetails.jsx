@@ -7,15 +7,15 @@ function MovieDetails({ movie }) {
   }
 
   return (
-    <div>
+    <div className="bg-black bg-opacity-80 p-12 rounded-lg mx-auto">
       <img
         src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
         alt={movie.title}
         className=" rounded-lgw-full h-auto rounded-md mb-2 flex items-center mx-auto "
       />
-      <h1 className="mx-20 font-bold text-base py-4">{movie.title}</h1>
-      <p className="line-clamp-4 mx-20">{movie.overview}</p>
-      <p className="mx-20 py-4">Release Date: {movie.release_date}</p>
+      <h1 className="mx-20 font-bold text-base py-4 text-3xl text-orange-600">{movie.title}</h1>
+      <p className="line-clamp-4 mx-20 text-white">{movie.overview}</p>
+      <p className="mx-20 py-4 text-yellow-300">Release Date: {movie.release_date}</p>
 
       <p className="mx-20 py-2">
       <svg
