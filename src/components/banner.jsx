@@ -23,7 +23,7 @@ const Banner = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -39,11 +39,11 @@ const Banner = () => {
   };
 
   return (
-    <div className="h-80 relative ">
+    <div className="h-85 relative ">
       <Slider {...settings}>
         {movies.map(movie => (
-          <div key={movie.id} className="h-80 relative">
-            <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} className="w-580 h-780 bg-cover" />
+          <div key={movie.id} className="h-85 relative">
+            <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} className="w-300 h-700 bg-cover" />
             <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white ">
               <div className='bg-black bg-opacity-70 p-8 rounded-lg text-center'>
               <h1 className="text-4xl text-white text-outline font-bold mb-4 ">{movie.title}</h1>
