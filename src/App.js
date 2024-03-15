@@ -21,6 +21,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+
+  console.log(process.env);
+  
   return (
       <div className="App">
         <RouterProvider router={router} />
@@ -31,6 +34,7 @@ function App() {
         {/* example of how you can use the heroicon the import can be seen above*/}
         {/* <BeakerIcon className="h-6 w-6 text-blue-500" /> */}
       </div>      
+      
   );
 }
 

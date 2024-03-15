@@ -50,11 +50,11 @@ function MovieDetailspage() {
         <br />
         <br />
         <br />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-2 gap-5 my-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-2 gap-5 p-4">
           {/* // show movie detail i.e the title and a short overview */}
           {movie && <MovieDetails movie={movie} />}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 xl:grid-row-4 gap-4 my-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 xl:grid-row-4 gap-5 p-4">
             {/* // show movie ratings and user reviews */}
             {movieId && <UserRatings movieId={movieId} />}
           </div>

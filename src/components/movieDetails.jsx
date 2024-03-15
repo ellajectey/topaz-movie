@@ -7,17 +7,17 @@ function MovieDetails({ movie }) {
   }
 
   return (
-    <div className="bg-black bg-opacity-80 p-12 rounded-lg mx-auto">
+    <div className="bg-black bg-opacity-90 p-12 rounded-lg mx-auto">
       <img
         src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
         alt={movie.title}
         className=" rounded-lgw-full h-auto rounded-md mb-2 flex items-center mx-auto "
       />
-      <h1 className="mx-20 font-bold text-base py-4 text-3xl text-orange-600">{movie.title}</h1>
-      <p className="line-clamp-4 mx-20 text-white">{movie.overview}</p>
+      <h1 className="mx-20 font-bold text-base py-4 text-4xl text-orange-600">{movie.title}</h1>
+      <p className="line-clamp-5 mx-20 text-white">{movie.overview}</p>
       <p className="mx-20 py-4 text-yellow-300">Release Date: {movie.release_date}</p>
 
-      <p className="mx-20 py-2">
+      <p className="mx-20 py-2 text-yellow-200 inline-flex">
       <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -39,6 +39,7 @@ function MovieDetails({ movie }) {
         Watch Trailer
       </button>
     </div>
+    
   );
 }
 

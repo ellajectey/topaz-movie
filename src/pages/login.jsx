@@ -8,7 +8,7 @@ function Login(props) {
     <>
      <NavBar />
 <div class="flex justify-center items-center h-screen bg-[url('./assets/images/yellow-movie-bg.jpg')]">
-  <div class=" bg-slate-800 border border-slate-400 rounded-md p-12 shadow-lg backdrop-filter backdrop-blur-sm bg-opacity-30 relative">
+  <div class=" bg-slate-800 border border-slate-400 rounded-md p-12 shadow-lg backdrop-filter backdrop-blur-sm bg-opacity-50 relative">
     <h2 class="text-2xl font-semibold text-center text-white mb-6">Login</h2>
     <form class="w-full max-w-md">
       <div class="mb-4">

@@ -22,7 +22,7 @@ export default function UserRatings({ movieId }) {
   }, [reviews]);
 
   return (
-    <div className="bg-black bg-opacity-80 p-12 rounded-lg mx-auto py-4">
+    <div className="bg-black bg-opacity-90 p-12 rounded-lg mx-auto py-4">
    
       {reviews.map((review, key) => {
         return (
